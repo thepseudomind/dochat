@@ -1,0 +1,63 @@
+@import '../../styles/abstract/mixins';
+@import '../../styles/abstract/variables';
+
+.list-tile{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem 0;
+    cursor: pointer;
+    border-bottom: .1rem solid rgba(black, .2); //to be removed if there is more than one chat room
+    
+    &:not(:last-child){
+        border-bottom: .1rem solid rgba(black, .2);
+    }
+
+    @include respond(tab-port){
+        width: 100%;
+        padding: 1.5rem;
+        padding-left: 2.5rem;
+        color: rgba(black, .7);
+    }
+
+    &__text{
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        & > *{
+            padding-left: 1rem;
+        }
+
+        &--title{
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        &--comment{
+            display: inline-block;
+            font-size: 1.2rem;
+        }
+
+        @include respond(tab-port){
+            width: 80%;
+        }
+
+        @include respond(phone){
+            width: 65%;
+        }
+    }
+
+    &__time{
+        font-size: 1rem;
+    }
+
+    &.dark{
+        color: white;
+        background-color: transparent;
+        border-bottom: .1rem solid rgba(white, .2);
+    }
+}

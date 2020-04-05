@@ -1,0 +1,58 @@
+@import '../../styles/abstract/mixins';
+@import '../../styles/abstract/variables';
+
+
+.favorites{
+    display: none;
+    visibility: hidden;
+
+    @include respond(tab-port){
+        display: block;
+        visibility: visible;
+        padding: 4rem 0 .5rem 0;
+        background-color: $color-secondary;
+        border-top-left-radius: 5rem;
+        border-top-right-radius: 5rem;
+        transform: translateY(-5rem);
+
+        & > *{
+            color: grey;
+            font-size: 1.75rem;
+        }
+
+        &.dark{
+            background-color: $color-secondary-dark; 
+
+            & > *{
+                color: white;
+            }
+        }
+
+        &__top{
+            width: 90%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            &--text{
+                text-transform: capitalize;
+            }
+        }
+
+        &__chats{
+            padding-left: 2rem;
+            overflow-x: scroll;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            scrollbar-width: none;
+
+            &::-webkit-scrollbar{
+                display: none;
+                visibility: hidden;
+            }
+        }
+    }
+}

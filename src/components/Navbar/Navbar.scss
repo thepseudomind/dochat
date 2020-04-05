@@ -1,0 +1,150 @@
+@import '../../styles/abstract/mixins';
+@import '../../styles/abstract/variables';
+
+.navbar{
+    align-self: center;
+    padding: 1.25rem 2.5rem;
+    background-color: $color-tertiary;
+    border-radius: 5rem;
+
+    &.dark{
+        background-color: $color-secondary-dark;
+    }
+
+    &__menu{
+        list-style: none;
+
+        &--items{
+            display: inline-block;
+            
+            &:not(:last-child){
+                margin-right: 1.5rem;
+            }
+
+            &--link{
+                color: $color-primary;
+
+                &.dark{
+                    color: white;
+                }
+
+                &:link, &:active{
+                    display: inline-block;
+                    background-color: white;
+                    height: 5rem;
+                    width: 5rem;
+                    border-radius: 50%;
+                    font-size: 1.5rem;
+                    box-shadow: .3rem .3rem .5rem rgba(black, .2);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    &.dark{
+                        background-color: $color-secondary-dark;
+                        box-shadow: .2rem .2rem .2rem .2rem rgba(black, .2);
+                    }
+                }
+
+                &:hover, &.active{
+                    background-color: darken($color-primary, .6);
+                    color: white;
+
+                    &.dark{
+                        background-color: darken($color-primary-dark, .6);
+                        box-shadow: .2rem .2rem .2rem .2rem rgba(black, .2);
+                    }
+                }
+            }
+        }
+    }
+
+    @include respond(tab-port){
+        display: none;
+        visibility: hidden;
+    }
+
+    &-mobile{
+        display: none;
+        visibility: hidden;
+
+        @include respond(tab-port){
+            display: block;
+            visibility: visible;
+            padding: 3rem 0 6rem 0;
+            background-color: $color-primary;
+
+            &.dark{
+                background-color: $color-primary-dark;
+            }
+    
+            &__top{
+                width: 90%;
+                margin: 0 auto;
+                display: flex;
+                justify-content: space-between;
+                align-content: center;
+        
+                &--icon{
+                    font-size: 2.25rem;
+                    color: white;
+                }
+            }
+        
+            &__bottom{
+                overflow-x: scroll;
+                scroll-behavior: smooth;
+                display: flex;
+                flex-direction: row;
+                scrollbar-width: none;
+        
+                &::-webkit-scrollbar{
+                    visibility: hidden;
+                }
+        
+                &--link{
+                    color: #FAA79E;
+
+                    &.dark{
+                        color: grey;
+                    }
+
+                    &:link, &:active{
+                        text-decoration: none;
+                        font-size: 3.5rem;
+                        font-weight: 400;
+                        margin: 0 1rem 0 2rem;
+
+                        &.dark{
+                            background-color: transparent;
+                        }
+                    }
+
+                    &.active{
+                        color: white;
+
+                        &.dark{
+                            color: white;
+                        }
+                    }
+                }
+
+                &--title{
+                    font-size: 3.5rem;
+                    font-weight: 400;
+                    margin-left: 1rem;
+                }
+            }
+
+            @include respond(phone){
+                padding: 2rem 0 6rem 0;
+            }
+    
+            & > *{
+                &:first-child{
+                    margin-bottom: 4rem;
+                }
+            }
+        }
+    }
+}

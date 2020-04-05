@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "lib": [
+      "dom",
+      "es5",
+      "es6",
+      "esnext.intl",
+      "es2017.intl",
+      "es2018.intl"
+    ],
+    "strict": true,
+    "jsx": "react",
+    "rootDir": "./src",
+    "incremental": true,
+    "experimentalDecorators": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true
+  }
+}

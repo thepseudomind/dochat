@@ -1,0 +1,79 @@
+@import '../../styles/abstract/mixins';
+@import '../../styles/abstract/variables';
+
+.route-desktop{
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 90%;
+    margin: auto 0;
+
+    &.dark{
+        color: white;
+    }
+    
+    &__intro{
+        width: 70%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 1.75rem;
+        margin-bottom: 2.5rem;
+    }
+
+    &__input{
+        width: 70%;
+        margin: 0 auto 2rem auto;
+        border-radius: 3rem;
+        overflow: hidden;
+        background-color: $color-tertiary;
+        height: 7rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &.dark{
+            background-color: $color-tertiary-dark;
+        }
+
+        &--textfield{
+            width: 90%;
+            height: inherit;
+            padding-left: 2rem;
+            font-size: 1.5rem;
+            background-color: $color-tertiary;
+            border: .05rem solid $color-tertiary;
+            color: black;
+            font-family: 'Nunito', sans-serif;
+
+            &.dark{
+                color: white;
+                background-color: $color-tertiary-dark;
+                border: .05rem solid $color-tertiary-dark;
+            }
+
+            &:focus{
+                outline: none;
+                border: .1rem solid transparent;
+            }
+        }
+
+        &--icon{
+            color: grey;
+            font-size: 1.5rem;
+            margin-right: 2rem;
+
+            &.dark{
+                background-color: $color-tertiary-dark;
+                color: white;
+            }
+        }
+    }
+
+    @include respond(tab-port){
+        display: none;
+        visibility: hidden;
+    }
+}
