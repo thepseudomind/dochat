@@ -9,7 +9,8 @@ import { switchChatMode, setRoom, updateRoom, isMessageUnread, sendMessage, fetc
 interface NavbarProps {
     room: {
         chatting: boolean,
-        activeRoom: {id: number, room: string, avatar: string, messages: any[]}, 
+        activeRoom: {id: number, room: string, avatar: string, messages: any[]},
+        unreadMessage : boolean 
     },
     settings: {
         theme: string,
@@ -23,6 +24,7 @@ const NavbarMobile : React.FunctionComponent = ()=> {
     const roomName = useSelector((state: NavbarProps) => state.room.activeRoom.room);
     const theme = useSelector(((state : NavbarProps) => state.settings.theme));
     const language = useSelector(((state : NavbarProps) => state.settings.language));
+    const unreadMessage = useSelector((state: NavbarProps) => state.room.unreadMessage);
 
     return (
         <nav className={`navbar-mobile${theme === 'light' ? '': ' dark'}`}>
@@ -36,7 +38,7 @@ const NavbarMobile : React.FunctionComponent = ()=> {
             {
                 chatting ? <div className="navbar-mobile__bottom"><span className="navbar-mobile__bottom--title">{roomName}</span></div> :
                 <div className="navbar-mobile__bottom">
-                    <NavLink exact to="/" activeClassName={`navbar-mobile__bottom--link active${theme === 'light' ? '': ' dark'}`} className={`navbar-mobile__bottom--link${theme === 'light' ? '': ' dark'}`}>{(language === 'luxembourgish') ? 'Messagen' : 'Chats'}</NavLink>
+                    <NavLink exact to="/" activeClassName={`navbar-mobile__bottom--link active${theme === 'light' ? '': ' dark'}`} className={`navbar-mobile__bottom--link${theme === 'light' ? '': ' dark'}`}>{(language === 'luxembourgish') ? 'Messagen' : 'Chats'}{unreadMessage ? <span className={`navbar-mobile__bottom--indicator${theme === 'light' ? '': ' dark'}`}>1</span> : null}</NavLink>
                     <NavLink to="/settings" activeClassName={`navbar-mobile__bottom--link active${theme === 'light' ? '': ' dark'}`} className={`navbar-mobile__bottom--link${theme === 'light' ? '': ' dark'}`}>{(language === 'luxembourgish') ? 'Astellungen' : 'Settings'}</NavLink>
                     <a href="#" className={`navbar-mobile__bottom--link${theme === 'light' ? '': ' dark'}`}>{(language === 'luxembourgish') ? 'Profil' : 'Profile'}</a>
                 </div>

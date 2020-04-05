@@ -44,6 +44,7 @@ const Navbar: React.FunctionComponent = ()=>{
             <ul className="navbar__menu">
                 <li className="navbar__menu--items">
                     <NavLink exact to="/" activeClassName={`navbar__menu--items--link active${theme === 'light' ? '': ' dark'}`} className={`navbar__menu--items--link${theme === 'light' ? '': ' dark'}`}><FontAwesomeIcon icon={faComments}/></NavLink>
+                    {unreadMessage ? <span className={`navbar__menu--indicator${theme === 'light' ? '': ' dark'}`}>1</span> : null}
                 </li>
                 <li className="navbar__menu--items">
                     <NavLink to="/settings" activeClassName={`navbar__menu--items--link active${theme === 'light' ? '': ' dark'}`} className={`navbar__menu--items--link${theme === 'light' ? '': ' dark'}`}><FontAwesomeIcon icon={faCog}/></NavLink>

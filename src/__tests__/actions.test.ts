@@ -22,10 +22,6 @@ describe('test actions', ()=>{
         expect(actions.setMessage('holla')).toEqual({type: SET_MESSAGE, payload: 'holla'})
     })
 
-    it('update user rooms', ()=>{
-        expect(actions.updateRoom([{name: 'kunle', message: 'i love you', date: ''}])).toEqual({type: UPDATE_ROOM, payload: [{name: 'kunle', message: 'i love you', date: ''}]})
-    })
-
     it('switch app theme', ()=>{
         expect(actions.switchThemes('beige')).toEqual({type: SWITCH_THEME, payload: 'beige'})
     })

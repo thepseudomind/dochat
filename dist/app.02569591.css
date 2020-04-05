@@ -87,6 +87,16 @@ body {
     Desktop = 1200px-1800px (Regular styles apply)
     Big Desktop = >1800px 
 */
+@keyframes pulsing {
+  0% {
+    opacity: 0; }
+  25% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
 .navbar {
   align-self: center;
   padding: 1.25rem 2.5rem;
@@ -97,7 +107,8 @@ body {
   .navbar__menu {
     list-style: none; }
     .navbar__menu--items {
-      display: inline-block; }
+      display: inline-block;
+      position: relative; }
       .navbar__menu--items:not(:last-child) {
         margin-right: 1.5rem; }
       .navbar__menu--items--link {
@@ -124,6 +135,25 @@ body {
           .navbar__menu--items--link:hover.dark, .navbar__menu--items--link.active.dark {
             background-color: #262931;
             box-shadow: 0.2rem 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.2); }
+    .navbar__menu--indicator {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 1.65rem;
+      width: 1.65rem;
+      border-radius: 50%;
+      color: white;
+      background-color: #FA4932;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0.1rem 0.1rem 0.2rem rgba(0, 0, 0, 0.2);
+      animation: pulsing 2s infinite cubic-bezier(0.75, 0.5, 0.5, 0.75);
+      -webkit-animation: pulsing 2s infinite cubic-bezier(0.75, 0.5, 0.5, 0.75);
+      -moz-animation: pulsing 2s infinite cubic-bezier(0.75, 0.5, 0.5, 0.75); }
+      .navbar__menu--indicator.dark {
+        background-color: white;
+        color: black; }
   @media (max-width: 56.25em) {
     .navbar {
       display: none;
@@ -157,7 +187,8 @@ body {
           .navbar-mobile__bottom::-webkit-scrollbar {
             visibility: hidden; }
           .navbar-mobile__bottom--link {
-            color: #FAA79E; }
+            color: #FAA79E;
+            position: relative; }
             .navbar-mobile__bottom--link.dark {
               color: grey; }
             .navbar-mobile__bottom--link:link, .navbar-mobile__bottom--link:active {
@@ -174,7 +205,27 @@ body {
           .navbar-mobile__bottom--title {
             font-size: 3.5rem;
             font-weight: 400;
-            margin-left: 1rem; } }
+            margin-left: 1rem; }
+          .navbar-mobile__bottom--indicator {
+            position: absolute;
+            top: 0;
+            right: -1rem;
+            height: 1.65rem;
+            width: 1.65rem;
+            border-radius: 50%;
+            font-size: 1rem;
+            color: white;
+            background-color: #FA4932;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0.1rem 0.1rem 0.2rem rgba(0, 0, 0, 0.2);
+            animation: pulsing 2s infinite cubic-bezier(0.75, 0.5, 0.5, 0.75);
+            -webkit-animation: pulsing 2s infinite cubic-bezier(0.75, 0.5, 0.5, 0.75);
+            -moz-animation: pulsing 2s infinite cubic-bezier(0.75, 0.5, 0.5, 0.75); }
+            .navbar-mobile__bottom--indicator.dark {
+              background-color: white;
+              color: black; } }
   @media (max-width: 56.25em) and (max-width: 37.5em) {
     .navbar-mobile {
       padding: 2rem 0 6rem 0; } }

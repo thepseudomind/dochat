@@ -1,4 +1,4 @@
-import { ROOMS_FAILED, ROOMS_LOADED, ROOMS_LOADING, IS_CHATTING, SET_MESSAGE, SET_ROOM, UPDATE_ROOM, SEND_MESSAGE, UNREAD_MESSAGE } from '../store/constants/constants';
+import { ROOMS_FAILED, ROOMS_LOADED, ROOMS_LOADING, IS_CHATTING, SET_MESSAGE, SET_ROOM, SEND_MESSAGE, UNREAD_MESSAGE } from '../store/constants/constants';
 import {roomsReducer} from '../store/reducers/roomsReducer';
 
 describe('test rooms', ()=>{
@@ -20,11 +20,6 @@ describe('test rooms', ()=>{
     it('can set rooms', ()=>{
         expect(roomsReducer(initialRooms, {type: SET_ROOM, payload: {id: '0', room: 'newRoom'}}))
         .toEqual({...initialRooms, activeRoom: {id: '0', room: 'newRoom'}})
-    })
-
-    it('update rooms with messages from api', ()=>{
-        expect(roomsReducer(initialRooms, {type: UPDATE_ROOM, payload: [{name: 'kenny', message: '', date: ''}]}))
-        .toEqual({...initialRooms, rooms: [{name: 'kenny', message: '', date: ''}]})
     })
 
     it('is user chatting currently', ()=>{

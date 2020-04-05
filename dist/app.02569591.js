@@ -35992,7 +35992,7 @@ var initialRooms = {
   },
   isLoading: false,
   error: '',
-  unreadMessage: false
+  unreadMessage: true
 };
 
 exports.roomsReducer = function (state, action) {
@@ -36308,7 +36308,7 @@ var redux_persist_1 = require("redux-persist");
 var persistConfig = {
   key: 'root',
   storage: storage_1.default,
-  whitelist: ['settings']
+  whitelist: ['room', 'settings']
 };
 var rootReducer = redux_1.combineReducers({
   room: roomsReducer_1.roomsReducer,
@@ -46357,6 +46357,9 @@ var NavbarMobile = function NavbarMobile() {
   var language = react_redux_1.useSelector(function (state) {
     return state.settings.language;
   });
+  var unreadMessage = react_redux_1.useSelector(function (state) {
+    return state.room.unreadMessage;
+  });
   return react_1.default.createElement("nav", {
     className: "navbar-mobile" + (theme === 'light' ? '' : ' dark')
   }, react_1.default.createElement("div", {
@@ -46382,7 +46385,9 @@ var NavbarMobile = function NavbarMobile() {
     to: "/",
     activeClassName: "navbar-mobile__bottom--link active" + (theme === 'light' ? '' : ' dark'),
     className: "navbar-mobile__bottom--link" + (theme === 'light' ? '' : ' dark')
-  }, language === 'luxembourgish' ? 'Messagen' : 'Chats'), react_1.default.createElement(react_router_dom_1.NavLink, {
+  }, language === 'luxembourgish' ? 'Messagen' : 'Chats', unreadMessage ? react_1.default.createElement("span", {
+    className: "navbar-mobile__bottom--indicator" + (theme === 'light' ? '' : ' dark')
+  }, "1") : null), react_1.default.createElement(react_router_dom_1.NavLink, {
     to: "/settings",
     activeClassName: "navbar-mobile__bottom--link active" + (theme === 'light' ? '' : ' dark'),
     className: "navbar-mobile__bottom--link" + (theme === 'light' ? '' : ' dark')
@@ -61340,7 +61345,9 @@ var Navbar = function Navbar() {
     className: "navbar__menu--items--link" + (theme === 'light' ? '' : ' dark')
   }, react_1.default.createElement(react_fontawesome_1.FontAwesomeIcon, {
     icon: free_regular_svg_icons_1.faComments
-  }))), react_1.default.createElement("li", {
+  })), unreadMessage ? react_1.default.createElement("span", {
+    className: "navbar__menu--indicator" + (theme === 'light' ? '' : ' dark')
+  }, "1") : null), react_1.default.createElement("li", {
     className: "navbar__menu--items"
   }, react_1.default.createElement(react_router_dom_1.NavLink, {
     to: "/settings",
@@ -62074,7 +62081,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65465" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54392" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

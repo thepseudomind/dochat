@@ -10,7 +10,7 @@ import { persistReducer } from 'redux-persist';
 const persistConfig = {
     key: 'root',
     storage,
-    whitelist: ['settings']
+    whitelist: ['room', 'settings']
 };
 
 const rootReducer = combineReducers({room: roomsReducer, settings: settingsReducer, chat: chatReducer});
