@@ -1,4 +1,4 @@
-DOCHAT
+page from tapping the list tileDOCHAT
 ====
 
 # Business need
@@ -18,23 +18,11 @@ The main goal is to create a simple chat app where users can communicate with ea
   - You can change the settings of the app including the theme (light and dark), display on chat messages (12hour or 24hour), sending messages using Ctrl+Enter (i omitted this functionality from chat page the mobile version because users don't have access to Ctrl key on their mobile phones). You can also chnage the app's language between English and Luxembourgish.
   - You can reset all settings to default.
   - All state was managed using Redux.
+  - Except when a message comes in while the user is on the settings page, you need to explicitly enter the chatting page from tapping the list tile to chat with other users. The overview is for UX purposes
 
 ### Extra features
 
 - The chat overview interface including a unique UI for both mobile and desktop versions of the app
-
-### Screenshots
-![screenshot](https://github.com/thepseudomind/dochat/blob/master/screenshots/chat-overview-web.png)
-![screenshot](https://github.com/thepseudomind/dochat/blob/master/screenshots/dark-mode-chat-overview.png)
-![screenshot](https://github.com/thepseudomind/dochat/blob/master/screenshots/mobile-home.png)
-![screenshot](https://github.com/thepseudomind/dochat/blob/master/screenshots/mobile-chat.png)
-![screenshot](https://github.com/thepseudomind/dochat/blob/master/screenshots/settings-language-web.png)
-![screenshot](https://github.com/thepseudomind/dochat/blob/master/screenshots/mobile-settings.png)
-![screenshot](https://github.com/thepseudomind/dochat/blob/master/screenshots/settings-language-web.png)
-![screenshot](https://github.com/thepseudomind/dochat/blob/master/screenshots/mobile-chat-dark.png)
-![screenshot](https://github.com/thepseudomind/dochat/blob/master/screenshots/mobile-settings-dark.png)
-![screenshot](https://github.com/thepseudomind/dochat/blob/master/screenshots/chatting-dark-web.png)
-
 
 Things omitted
 ----
@@ -69,4 +57,16 @@ To show test coverage, run `npm test -- --coverage --watchAll`. It will show cur
 ### Additional information
 
 I named it DoChat after Docler and used a shade of red as the primary color in the light mode based on the companies colors. Hope you like it
+
+### Screenshots
+![screenshot](https://github.com/thepseudomind/dochat/blob/master/screenshots/chat-overview-web.png)
+![screenshot](https://github.com/thepseudomind/dochat/blob/master/screenshots/dark-mode-chat-overview.png)
+![screenshot](https://github.com/thepseudomind/dochat/blob/master/screenshots/mobile-home.png)
+![screenshot](https://github.com/thepseudomind/dochat/blob/master/screenshots/mobile-chat.png)
+![screenshot](https://github.com/thepseudomind/dochat/blob/master/screenshots/mobile-settings.png)
+![screenshot](https://github.com/thepseudomind/dochat/blob/master/screenshots/settings-language-web.png)
+![screenshot](https://github.com/thepseudomind/dochat/blob/master/screenshots/settings-language-web.png)
+![screenshot](https://github.com/thepseudomind/dochat/blob/master/screenshots/mobile-settings-dark.png)
+![screenshot](https://github.com/thepseudomind/dochat/blob/master/screenshots/mobile-chat-dark.png)
+![screenshot](https://github.com/thepseudomind/dochat/blob/master/screenshots/chatting-dark-web.png)
 
