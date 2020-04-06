@@ -11,33 +11,18 @@ import io from 'socket.io-client';
 let socket =  io.connect(`${process.env.SERVER}`);
 
 interface NavbarProps{
-    chat: {
-        activeUser: string
-    },
     settings: {
         theme: string
     },
     room: {
-        rooms: Array<{id: number, room: string, avatar: string, messages: any[]}>,
-        activeRoom: {id: number, room: string, avatar: string, messages: any[]},
         unreadMessage: boolean
     }
 }
 
 const Navbar: React.FunctionComponent = ()=>{
-    const dispatch = useDispatch();
-    const location = useLocation();
     const theme = useSelector(((state : NavbarProps) => state.settings.theme));
     const unreadMessage = useSelector(((state : NavbarProps) => state.room.unreadMessage));
 
-    useEffect(()=>{
-        socket.on('musicboard', ({name, message, date})=>{
-            if(location.pathname === '/settings'){
-                console.log('New message received');
-                dispatch(isMessageUnread(true));
-            }
-        });
-    }, []);
 
     return (
         <nav className={`navbar${theme === 'light' ? '': ' dark'}`}>

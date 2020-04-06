@@ -25,13 +25,13 @@ The main goal is to create a simple chat app where users can communicate with ea
 
 ### Screenshots
 ![screenshot](https://github.com/thepseudomind/dochat/blob/master/screenshots/chat-overview-web.png)
-![screenshot](https://github.com/thepseudomind/dochat/blob/master/screenshots/dark_dark-mode-chat-overview.png)
+![screenshot](https://github.com/thepseudomind/dochat/blob/master/screenshots/dark-mode-chat-overview.png)
 ![screenshot](https://github.com/thepseudomind/dochat/blob/master/screenshots/mobile-home.png)
 ![screenshot](https://github.com/thepseudomind/dochat/blob/master/screenshots/mobile-chat.png)
 ![screenshot](https://github.com/thepseudomind/dochat/blob/master/screenshots/settings-language-web.png)
 ![screenshot](https://github.com/thepseudomind/dochat/blob/master/screenshots/mobile-settings.png)
 ![screenshot](https://github.com/thepseudomind/dochat/blob/master/screenshots/settings-language-web.png)
-![screenshot](https://github.com/thepseudomind/dochat/blob/master/screenshots/light_mobile-chat-dark.png)
+![screenshot](https://github.com/thepseudomind/dochat/blob/master/screenshots/mobile-chat-dark.png)
 ![screenshot](https://github.com/thepseudomind/dochat/blob/master/screenshots/mobile-settings-dark.png)
 ![screenshot](https://github.com/thepseudomind/dochat/blob/master/screenshots/chatting-dark-web.png)
 

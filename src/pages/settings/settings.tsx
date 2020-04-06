@@ -31,6 +31,7 @@ const SettingsPage : React.FunctionComponent = ()=>{
     const language = useSelector((state: SettingsPageProps) => state.settings.language);
     const rooms = useSelector((state: SettingsPageProps) => state.room.rooms);
 
+    //If user gets message while on settings page, detect and show blinking indicator on menu or navbar. Also send the message and pudate on API
     useEffect(()=>{
         console.log(rooms);
         socket.on('musicboard', ({name, message, date})=>{
@@ -42,7 +43,6 @@ const SettingsPage : React.FunctionComponent = ()=>{
                 dispatch(updateRoom());
             }
         });
-        //if(location.pathname === '/' && unreadMessage === true) alert('Read the message')
     }, []);
 
     return (
