@@ -1,4 +1,4 @@
-page from tapping the list tileDOCHAT
+DOCHAT
 ====
 
 # Business need
