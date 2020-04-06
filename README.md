@@ -42,7 +42,7 @@ Open another terminal tab and run `npm run dev` to start the development version
 
 Open a new terminal, navigate into the server folder using `cd server`on Mac/Linux. Run `npm start` to start the server.
 
-Also run from your command line `npm run dev`. It'll launch the FreightHub web app at port 1234.
+Also run from your command line `npm run dev`. It'll launch the DoChat web app at port 1234.
 
 ### What libraries/frameworks, packages, tools did I use?
 
