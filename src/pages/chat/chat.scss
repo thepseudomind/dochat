@@ -248,6 +248,11 @@
                 background-color: $color-secondary-dark;
             }
 
+            &__media{
+                width: 15rem;
+                height: 15rem;     
+            }
+
             &__body{
                 flex: 1;
                 margin: 3rem 0 4rem 0;

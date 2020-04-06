@@ -35992,7 +35992,7 @@ var initialRooms = {
   },
   isLoading: false,
   error: '',
-  unreadMessage: true
+  unreadMessage: false
 };
 
 exports.roomsReducer = function (state, action) {
@@ -60895,7 +60895,7 @@ var ChatPageMobile = function ChatPageMobile() {
         text = arrayOfString.join(' ');
         return react_1.default.createElement("div", null, react_1.default.createElement("img", {
           src: link,
-          className: "chat__media"
+          className: "chat-mobile__media"
         }), react_1.default.createElement("p", null, react_emoji_1.default.emojify(text)));
 
       case (message.includes('http') || message.includes('https')) && (message.includes('youtube') || message.includes('youtu.be')):
@@ -60907,7 +60907,7 @@ var ChatPageMobile = function ChatPageMobile() {
         text = arrayOfString.join(' ');
         embedCode = link.toString().slice(-11);
         return react_1.default.createElement("div", null, react_1.default.createElement("iframe", {
-          className: "chat__media",
+          className: "chat-mobile__media",
           src: "https://www.youtube.com/embed/" + embedCode,
           frameBorder: "0",
           allow: "accelerometer; encrypted-media; gyroscope; picture-in-picture",
@@ -62081,7 +62081,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54392" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49161" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

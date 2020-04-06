@@ -22,7 +22,7 @@ const initialRooms: roomStateProps = {
     activeRoom: {id: 0, room: '', avatar: '', messages: []},
     isLoading: false,
     error: '',
-    unreadMessage: true
+    unreadMessage: false
 }
 
 export const roomsReducer = (state = initialRooms, action: Action) => {

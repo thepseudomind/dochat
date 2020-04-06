@@ -60,7 +60,7 @@ const ChatPageMobile = ()=> {
                 text = arrayOfString.join(' ');
                 return (
                     <div>
-                        <img src={link} className="chat__media"/>
+                        <img src={link} className="chat-mobile__media"/>
                         <p>{ReactEmoji.emojify(text)}</p>
                     </div>
                 );
@@ -72,7 +72,7 @@ const ChatPageMobile = ()=> {
                 embedCode = link.toString().slice(-11);
                 return (
                     <div>
-                        <iframe className="chat__media" src={`https://www.youtube.com/embed/${embedCode}`} frameBorder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                        <iframe className="chat-mobile__media" src={`https://www.youtube.com/embed/${embedCode}`} frameBorder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                         <p>{ReactEmoji.emojify(text)}</p>
                     </div>
                 );
