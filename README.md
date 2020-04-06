@@ -24,16 +24,16 @@ The main goal is to create a simple chat app where users can communicate with ea
 - The chat overview interface including a unique UI for both mobile and desktop versions of the app
 
 ### Screenshots
-![screenshot](https://github.com/thepseudomind/dochat/screenshots/chat-overview-web.png)
-![screenshot](https://github.com/thepseudomind/dochat/screenshots/dark_dark-mode-chat-overview.png)
-![screenshot](https://github.com/thepseudomind/dochat/screenshots/mobile-home.png)
-![screenshot](https://github.com/thepseudomind/dochat/screenshots/mobile-chat.png)
-![screenshot](https://github.com/thepseudomind/dochat/screenshots/settings-language-web.png)
-![screenshot](https://github.com/thepseudomind/dochat/screenshots/mobile-settings.png)
-![screenshot](https://github.com/thepseudomind/dochat/screenshots/settings-language-web.png)
-![screenshot](https://github.com/thepseudomind/dochat/screenshots/light_mobile-chat-dark.png)
-![screenshot](https://github.com/thepseudomind/dochat/screenshots/mobile-settings-dark.png)
-![screenshot](https://github.com/thepseudomind/dochat/screenshots/chatting-dark-web.png)
+![screenshot](https://github.com/thepseudomind/dochat/blob/master/screenshots/chat-overview-web.png)
+![screenshot](https://github.com/thepseudomind/dochat/blob/master/screenshots/dark_dark-mode-chat-overview.png)
+![screenshot](https://github.com/thepseudomind/dochat/blob/master/screenshots/mobile-home.png)
+![screenshot](https://github.com/thepseudomind/dochat/blob/master/screenshots/mobile-chat.png)
+![screenshot](https://github.com/thepseudomind/dochat/blob/master/screenshots/settings-language-web.png)
+![screenshot](https://github.com/thepseudomind/dochat/blob/master/screenshots/mobile-settings.png)
+![screenshot](https://github.com/thepseudomind/dochat/blob/master/screenshots/settings-language-web.png)
+![screenshot](https://github.com/thepseudomind/dochat/blob/master/screenshots/light_mobile-chat-dark.png)
+![screenshot](https://github.com/thepseudomind/dochat/blob/master/screenshots/mobile-settings-dark.png)
+![screenshot](https://github.com/thepseudomind/dochat/blob/master/screenshots/chatting-dark-web.png)
 
 
 Things omitted
