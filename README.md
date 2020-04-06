@@ -18,6 +18,7 @@ The main goal is to create a simple chat app where users can communicate with ea
   - You can change the settings of the app including the theme (light and dark), display on chat messages (12hour or 24hour), sending messages using Ctrl+Enter (i omitted this functionality from chat page the mobile version because users don't have access to Ctrl key on their mobile phones). You can also chnage the app's language between English and Luxembourgish.
   - You can reset all settings to default.
   - All state was managed using Redux.
+  - Except when a message comes in while the user is on the settings page, you need to explicitly enter the chatting page to chat with other users. The overview is for UX purposes
 
 ### Extra features
 
